@@ -6,9 +6,6 @@ typedef struct Labirinto Labirinto;
 
 struct Cell {
     char value;
-    bool left;
-    bool right;
-    bool bottom;
 };
 
 struct Labirinto {
