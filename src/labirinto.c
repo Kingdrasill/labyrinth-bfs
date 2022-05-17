@@ -28,13 +28,12 @@ void ImprimirLab(Labirinto *lab) {
 
 int BFS(Labirinto *lab, Fila *f) {
     bool cont=true;
-    int count = -1, x=0, y=0;
+    int count = 1, x=0, y=0;
     Item aux, tmp;
 
     while (cont)
     {
         Desenfileira(f, &aux);
-        count++;
         x = aux.x;
         y = aux.y;
         if((x+1) < lab->linha && lab->map[x+1][y].value != '#' && !lab->map[x+1][y].added && cont) {
