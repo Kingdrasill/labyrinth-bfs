@@ -26,7 +26,63 @@ void ImprimirLab(Labirinto *lab) {
     }
 }
 
-int BFS(Labirinto *lab, Fila *f);
+int BFS(Labirinto *lab, Fila *f) {
+    bool cont=true;
+    int count = -1, x=0, y=0;
+    Item aux, tmp;
+
+    while (cont)
+    {
+        Desenfileira(f, &aux);
+        count++;
+        x = aux.x;
+        y = aux.y;
+        if((x+1) < lab->linha && lab->map[x+1][y].value != '#' && !lab->map[x+1][y].added && cont) {
+            tmp.x = x+1;
+            tmp.y = y;;
+            lab->map[tmp.x][tmp.y].added = true;
+            Enfileira(f, tmp);
+            count++;
+            if(checkLast(lab, f))
+                cont = false;
+        }
+        if((y+1) < lab->coluna && lab->map[x][y+1].value != '#' && !lab->map[x][y+1].added && cont) {
+            tmp.x = x;
+            tmp.y = y+1;
+            lab->map[tmp.x][tmp.y].added = true;
+            Enfileira(f, tmp);
+            count++;
+            if(checkLast(lab, f))
+                cont = false;
+        }
+        if((y-1) >= 0 && lab->map[x][y-1].value != '#' && !lab->map[x][y-1].added && cont) {
+            tmp.x = x;
+            tmp.y = y-1;
+            lab->map[tmp.x][tmp.y].added = true;
+            Enfileira(f, tmp);
+            count++;
+            if(checkLast(lab, f))
+                cont = false;
+        }
+        if((x-1) >= 0 && lab->map[x-1][y].value != '#' && !lab->map[x-1][y].added && cont) {
+            tmp.x = x-1;
+            tmp.y = y;
+            lab->map[tmp.x][tmp.y].added = true;
+            Enfileira(f, tmp);
+            count++;
+            if(checkLast(lab, f))
+                cont = false;
+        }
+    }
+
+    return count;
+}
+
+bool checkLast(Labirinto *lab, Fila *f) {
+    if(f->U->data.x == (lab->linha-1) && f->U->data.y == (lab->coluna-1))
+        return true;
+    return false;
+}
 
 bool LerArquivo(Labirinto *lab) {
     FILE *fp;
@@ -51,9 +107,7 @@ bool LerArquivo(Labirinto *lab) {
             }
             else {
                 lab->map[i][j].value = cell;
-                lab->map[i][j].left = false;
-                lab->map[i][j].right = false;
-                lab->map[i][j].bottom = false;
+                lab->map[i][j].added = false;
                 j++;
             }
         }

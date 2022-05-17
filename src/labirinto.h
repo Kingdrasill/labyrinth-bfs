@@ -6,6 +6,7 @@ typedef struct Labirinto Labirinto;
 
 struct Cell {
     char value;
+    bool added;
 };
 
 struct Labirinto {
@@ -21,5 +22,7 @@ void Finalizar(Labirinto *lab);
 void ImprimirLab(Labirinto *lab);
 
 int BFS(Labirinto *lab, Fila *f);
+
+bool checkLast(Labirinto *lab, Fila *f);
 
 bool LerArquivo(Labirinto *lab);

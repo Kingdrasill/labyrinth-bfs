@@ -9,7 +9,6 @@ int main() {
     I.x = 0;
     I.y = 0;
     FFVazia(&F);
-    Enfileira(&F, I);
 
     printf("Quantidade de linhas do labirinto: ");
     scanf("%d", &l);
@@ -19,15 +18,15 @@ int main() {
     Inicializar(&L, l, c);
 
     LerArquivo(&L);
+    Enfileira(&F, I);
+    L.map[I.x][I.y].added = true;
 
     printf("\n");
     ImprimirLab(&L);
 
-    //iteracoes = DFS(&L, &P);
+    iteracoes = BFS(&L, &F);
 
     printf("\nNumero de iteracoes: %d\n", iteracoes);
-
-    Imprime(&F);
 
     Finalizar(&L);
 
