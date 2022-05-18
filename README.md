@@ -59,7 +59,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   <img src="imgs/exemplolabirintotxt.png">
 </p>
 
-<p align="justify">A função checkLast verifica se a posição é a última da matriz definida pelo labirinto.</p>
+<p align="justify">A função checkLast verifica se a ultima posição da fila é a última da matriz definida pelo labirinto.</p>
 
     Interações
 
