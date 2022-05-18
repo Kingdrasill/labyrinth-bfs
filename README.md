@@ -35,6 +35,8 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   Verificação das posições ao redor para mover na direção, no exemplo o algoritmo primeiramente irá para baixo, depois para direita, depois para esquerda e por último para cima:
 </p>
 <p align="center">
+  <img src="imgs/mover.png">
+</p>
 
 
 <p align="justify">
