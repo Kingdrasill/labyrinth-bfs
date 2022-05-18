@@ -45,7 +45,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 <p>Nessa estrutura temos a função Enfilera e Desenfilera, a função FFVazia, que inicializa a fila com valores nulos, e a função imprime, que imprime os valores obtidos na fila. </p>
 
 <h3>labirinto.h e labirinto.c</h3>
-<p> Utilizou-se as estruturas Cell e Fila para ação da matriz e análise das posições ao caminhar no labirinto. As funções inicializar e finalizar se refere a inicialização e finalização do labirinto. Com isso, é possivel imprimir o mesmo ultilizando a função ImprimirLab.</p>
+<p> Utilizou-se as estruturas Cell e Fila para a criação da matriz e fila e análise das posições ao caminhar no labirinto. As funções inicializar e finalizar se refere a inicialização e finalização do labirinto. Com isso, é possivel imprimir o mesmo ultilizando a função ImprimirLab.</p>
 
 <p>A função LerArquivo permite a leitura de arquivo em que está inserido o labirinto. Para a realização da leitura correta é necessário que o labirinto seja descrito no formato de matriz e considerando "." como passagem/caminho livre e "#" como a parede que impede de seguir o caminho, além disso é preciso inserir o nome do arquivo com sua extensão para evitar erros. Veja o exemplo a seguir: </p>
 
@@ -53,13 +53,15 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   <img src="imgs/exemplolabirintotxt.png">
 </p>
 
+<p>A função checkLast verifica se a posição é a última da matriz definida pelo labirinto.</p>
+
     Interações
 
-    As interações são definidas pela função DFS, sendo tratadas apenas pela inserções dentro da pilha. Após conferir cada posição possível para prosseguir, ao acrescentar a posição a pilha, imediatamente é acrescentado 1 a variável count resultando no valor total de interações necessárias para concluir o caminho. não foi considerado as interações de retirada na pilha (considerado como voltar no caminho) já que teoricamente estariamos acrescentando a mesmo posição duas vezes (ida e volta).
+    As interações são definidas pela função BFS, sendo tratadas através das inserções(enfileiramento) dentro da fila, desconsiderando a desenfileração dos valores.
 
 <h3>main.c</h3>
 
-<p>No main, inicializamos a pilha vazia e chamos o PUSH (Empilhar) e em seguida pedimos ao usuário o número de linhas e colunas do labirinto disponível no arquivo e consequentemente pedimos o nome do arquivo com a extensão. Inicializamos o labirinto e a leitura do arquivo, para conferir se a leitura esta correta, imprimos o labirinto para questões de comparação (caso o usuário queira conferir o resultado) e atribuimos a variavél iteracoes a função DFS e mostramos o resultado final de interações. Finalizamos a pilha e o labirinto no final.</p>
+<p>No main, inicializamos a fila vazia e em seguida pedimos ao usuário o número de linhas e colunas do labirinto disponível no arquivo e consequentemente pedimos o nome do arquivo com a extensão. Inicializamos o labirinto e a leitura do arquivo, para conferir se a leitura esta correta, imprimos o labirinto - para questões de comparação (caso o usuário queira conferir o resultado) e atribuimos a variavél iteracoes a função BFS e mostramos o resultado final de interações. Finalizamos a fila e o labirinto no final.</p>
 
 # Compilação e Execução
 
