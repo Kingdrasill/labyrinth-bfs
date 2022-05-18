@@ -35,7 +35,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   Verificação das posições "vizinhas" da primiera posiçao da fila para as adicionar na fila, no exemplo o algoritmo primeiramente irá adicionar primiero o de baixo, depois o da direita, depois o daa esquerda e por último o de cima:
 </p>
 <p align="center">
-  <img src="imgs/mover.png">
+  <img src="imgs/adicionar.png">
 </p>
 
 
