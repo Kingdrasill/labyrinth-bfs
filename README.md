@@ -31,7 +31,11 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 <p align="justify">
   Com as estruturas explicadas agora vamos entender como o método BFS funciona. Primeiro a posição inicial é adicionada a pilha, depois o algoritmo retira a primeira posição da fila e olha seus "vizinhos" conferindo as posições possíveis, sendo abaixo, à direita, à esquerda ou acima nesta ordem  (Neste último caso, considerado como voltar). Quando essa verificação se torna possível, essa posição é adicionada a fila.  Após isto, o algoritmo o algoritmo vai pegar a novamente a primeira posição da fila e verificar se há algum outro caminho para se mover nela, se houver, o mesmo vai repetir o último processo descrito até a última posição da fila for a posição final do labirinto.
 </p>
-
+<p align="justify">
+  Verificação das posições ao redor para mover na direção, no exemplo o algoritmo primeiramente irá para baixo, depois para direita, depois para esquerda e por último para cima:
+</p>
+<p align="center">
+  <i
 
 <p align="justify">
   Conclusão do labirinto e sua fila:
@@ -42,18 +46,18 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 
 # Algoritmo
 <h3>fila.h e fila.c</h3>
-<p>Nessa estrutura temos a função Enfilera e Desenfilera, a função FFVazia, que inicializa a fila com valores nulos, e a função imprime, que imprime os valores obtidos na fila. </p>
+<p align="justify">Nessa estrutura temos a função Enfilera e Desenfilera, a função FFVazia, que inicializa a fila com valores nulos, e a função imprime, que imprime os valores obtidos na fila. </p>
 
 <h3>labirinto.h e labirinto.c</h3>
-<p> Utilizou-se as estruturas Cell e Fila para a criação da matriz e fila e análise das posições ao caminhar no labirinto. As funções inicializar e finalizar se refere a inicialização e finalização do labirinto. Com isso, é possivel imprimir o mesmo ultilizando a função ImprimirLab.</p>
+<p align="justify"> Utilizou-se as estruturas Cell e Fila para a criação da matriz e fila e análise das posições ao caminhar no labirinto. As funções inicializar e finalizar se refere a inicialização e finalização do labirinto. Com isso, é possivel imprimir o mesmo ultilizando a função ImprimirLab.</p>
 
-<p>A função LerArquivo permite a leitura de arquivo em que está inserido o labirinto. Para a realização da leitura correta é necessário que o labirinto seja descrito no formato de matriz e considerando "." como passagem/caminho livre e "#" como a parede que impede de seguir o caminho, além disso é preciso inserir o nome do arquivo com sua extensão para evitar erros. Veja o exemplo a seguir: </p>
+<p align="justify">A função LerArquivo permite a leitura de arquivo em que está inserido o labirinto. Para a realização da leitura correta é necessário que o labirinto seja descrito no formato de matriz e considerando "." como passagem/caminho livre e "#" como a parede que impede de seguir o caminho, além disso é preciso inserir o nome do arquivo com sua extensão para evitar erros. Veja o exemplo a seguir: </p>
 
 <p align="center">
   <img src="imgs/exemplolabirintotxt.png">
 </p>
 
-<p>A função checkLast verifica se a posição é a última da matriz definida pelo labirinto.</p>
+<p align="justify">A função checkLast verifica se a posição é a última da matriz definida pelo labirinto.</p>
 
     Interações
 
@@ -61,7 +65,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 
 <h3>main.c</h3>
 
-<p>No main, inicializamos a fila vazia e em seguida pedimos ao usuário o número de linhas e colunas do labirinto disponível no arquivo e consequentemente pedimos o nome do arquivo com a extensão. Inicializamos o labirinto e a leitura do arquivo, para conferir se a leitura esta correta, imprimos o labirinto - para questões de comparação (caso o usuário queira conferir o resultado) e atribuimos a variavél iteracoes a função BFS e mostramos o resultado final de interações. Finalizamos a fila e o labirinto no final.</p>
+<p align="justify">No main, inicializamos a fila vazia e em seguida pedimos ao usuário o número de linhas e colunas do labirinto disponível no arquivo e consequentemente pedimos o nome do arquivo com a extensão. Inicializamos o labirinto e a leitura do arquivo, para conferir se a leitura esta correta, imprimos o labirinto - para questões de comparação (caso o usuário queira conferir o resultado) e atribuimos a variavél iteracoes a função BFS e mostramos o resultado final de interações. Finalizamos a fila e o labirinto no final.</p>
 
 # Compilação e Execução
 
