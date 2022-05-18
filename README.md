@@ -22,7 +22,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 </p>
 
 <p align="justify">
-  A estrutura fila dinâmica será utilizada para guardar o caminho tomado da entrada para chegar na saída. A fila dinâmica é uma variante do modelo de fila estática, onde há um ponteiro que aponta para o início da fila, um ponteiro que aponta para o fim da fila e os dados que possuem um valor que é passado para chegar nele. A estrutura pode ser vista pela visualização gráfica abaixo:  
+  A estrutura fila dinâmica, [vide git](<a href="https://github.com/mpiress/dynamic_queue">https://github.com/mpiress/dynamic_queue</a>), será utilizada para guardar o caminho tomado da entrada para chegar na saída. A fila dinâmica é uma variante do modelo de fila estática, onde há um ponteiro que aponta para o início da fila, um ponteiro que aponta para o fim da fila e os dados que possuem um valor que é passado para chegar nele. A estrutura pode ser vista pela visualização gráfica abaixo:  
 </p>
 <p align="center">
   <img src="imgs/filaestrutura.png">
@@ -81,4 +81,4 @@ A lista dinâmica disponibilizada possui um arquivo Makefile que realiza todo o 
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
 
 
-<p>Trabalho realizado Gabriel Júnior Teixeira e Lívia Gonçalves - Maio/2022</p>
+<p>Trabalho realizado Gabriel Teixeira Júlio e Lívia Gonçalves - Maio/2022</p>
