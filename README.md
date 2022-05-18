@@ -18,14 +18,14 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   E para um labirinto ser válido tem que exister pelo menos um caminho da entrada para o final. O labirinto a seguir é um labirinto 3x3 válido de exemplo:
 </p>
 <p align="center">
-  <img src="imgs/labirinto.png" width="400px">
+  <img src="imgs/matrizlabirintoBFS.png" width="400px">
 </p>
 
 <p align="justify">
   A estrutura fila dinâmica será utilizada para guardar o caminho tomado da entrada para chegar na saída. A fila dinâmica é uma variante do modelo de fila estática, onde há um ponteiro que aponta para o início da fila, um ponteiro que aponta para o fim da fila e os dados que possuem um valor que é passado para chegar nele. A estrutura pode ser vista pela visualização gráfica abaixo:  
 </p>
 <p align="center">
-  <img src="imgs/pilha.png">
+  <img src="imgs/filaestrutura.png">
 </p>
 
 <p align="justify">
@@ -43,7 +43,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
   Conclusão do labirinto e sua fila:
 </p>
 <p align="center">
-  <img src="imgs/exemploresultado.png">
+  <img src="imgs/conclusaofila.png">
 </p>
 
 # Algoritmo
