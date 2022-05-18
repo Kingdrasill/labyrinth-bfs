@@ -10,7 +10,7 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 </p>
 
 <p align="justify">
-  A estrutua da matriz possui um tamanho, uma largura, o dado de cada posição da matriz e as posições que poderá caminhar(Abaixo da posição, à esquerda da posição ou à direita da posição) e se esta posição já esteve na fila anteriormente. Esta irá representar um labirinto de tamanho n e largura m em que cada posição pode ter um dos tipos de dado a seguir:
+  A estrutua da matriz possui um tamanho, uma largura, o dado de cada posição da matriz e se esta posição já esteve na fila anteriormente. Esta irá representar um labirinto de tamanho n e largura m em que cada posição pode ter um dos tipos de dado a seguir:
   <ul>
     <li>"." - Simboliza um caminho passável no labirinto.</li>
     <li>"#" - Simboliza uma parede no labirinto.</li>
@@ -29,10 +29,10 @@ Busca em largura é um algoritmo normalmente ultilizado para realizar busca ou t
 </p>
 
 <p align="justify">
-  Com as estruturas explicadas agora vamos entender como o método BFS funciona. Primeiro a posição inicial é adicionada a pilha, depois o algoritmo retira a primeira posição da fila e olha seus "vizinhos" conferindo as posições possíveis, sendo abaixo, à direita, à esquerda ou acima nesta ordem  (Neste último caso, considerado como voltar). Quando essa verificação se torna possível, essa posição é adicionada a fila.  Após isto, o algoritmo o algoritmo vai pegar a novamente a primeira posição da fila e verificar se há algum outro caminho para se mover nela, se houver, o mesmo vai repetir o último processo descrito até a última posição da fila for a posição final do labirinto.
+  Com as estruturas explicadas agora vamos entender como o método BFS funciona. Primeiro a posição inicial é adicionada a fila, depois o algoritmo retira a primeira posição da fila e olha seus "vizinhos" conferindo as posições possíveis, sendo abaixo, à direita, à esquerda ou acima nesta ordem. Quando essa verificação se torna possível, essa posição é adicionada a fila.  Após isto, o algoritmo vai pegar a novamente a primeira posição da fila e verificar os "vizinhos" desta posição adicionando os que forem possível de passar na fila, se alguma "vizinho" já estiver na lista ele não é adicionado de novo. Esta operação será repetida até a última posição adicionada à fila for a posição final do labirinto.
 </p>
 <p align="justify">
-  Verificação das posições ao redor para mover na direção, no exemplo o algoritmo primeiramente irá para baixo, depois para direita, depois para esquerda e por último para cima:
+  Verificação das posições "vizinhas" da primiera posiçao da fila para as adicionar na fila, no exemplo o algoritmo primeiramente irá adicionar primiero o de baixo, depois o da direita, depois o daa esquerda e por último o de cima:
 </p>
 <p align="center">
   <img src="imgs/mover.png">
